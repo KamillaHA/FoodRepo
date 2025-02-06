@@ -1,16 +1,36 @@
 @import 'variables.css';
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Var er variable og henter fra variables.css */
+/* Var er variable og henter fra variables.css :root */
 body {
     color: var(--colorMain);
     background-color: var(--colorBgMain);
     font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    margin: 1rem 1rem;
+}
+
+header, footer {
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+footer {
+    color: var(--colorBgMain);
+    background-color: var(--colorSecondary);
+}
+header {
+    color: var(--colorSecondary);
+    h1 {
+        font-family: var(--fontTitle);
+    }
 }
 
 nav {
@@ -22,5 +42,13 @@ nav {
         li {
             list-style-type: none;
         }
+    }
+}
+
+a {
+    color: var(--colorSecondary);
+    text-decoration: none;
+    &:hover {
+        font-weight: bold;
     }
 }
