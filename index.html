@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Repo</title>
     <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/recipes.css">
+    <script src="js/nav.js" type="module"></script>
+    <script src="js/recipes.js" type="module"></script>
 </head>
 <body>
     <!-- Navigationsbar - Home - About - Contact -->
@@ -21,15 +24,14 @@
 <nav>
     <ul>
         <li><a href="index.html" title="Homepage">Home</a></li>
-        <li><a href="about.html" title="About">About</a></li>
+        <li><button id="btnAbout">About</button></li>
         <li><a href="contact.html" title="Contact">Contact</a></li>
     </ul>
 </nav>
 
 <main>
 
-    <section>
-        <p>Up to come</p>
+    <section id="recipe-list">
     </section>
 
 </main>
@@ -42,4 +44,17 @@
 </footer>
 
 </body>
+<!-- fetch med den rigtige/komprimerede måde -->
+<template id="recipe-card">
+    <article>
+        <header>
+            <h2></h2>
+        </header>
+        <img src="" alt="">
+        <div>
+            <p class="pill"></p>
+            <p class="pill"></p>
+        </div>
+    </article>
+</template>
 </html>

@@ -1,6 +1,6 @@
 @import 'variables.css';
 
-
+/* Removing default values */
 * {
     margin: 0;
     padding: 0;
@@ -11,13 +11,20 @@
 body {
     color: var(--colorMain);
     background-color: var(--colorBgMain);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fontMain);
+
+    @media (min-width: 1024px) {
+        max-width: var(--maxBodyWidth);
+        margin: auto;
+    }
 }
 
+/* Main */
 main {
     margin: 1rem 1rem;
 }
 
+/* Header & footer */
 header, footer {
     padding: 0.5rem 1rem;
     text-align: center;
@@ -33,6 +40,7 @@ header {
     }
 }
 
+/* Navigation */
 nav {
     ul {
         display: flex;
@@ -41,14 +49,58 @@ nav {
         gap: 1rem;
         li {
             list-style-type: none;
+            button {
+                border: none;
+                font-size: 1rem;
+                color: var(--colorSecondary);
+                background-color: var(--colorBgMain);
+                &:hover {
+                    font-weight: bold;
+                }
+            }
         }
     }
 }
 
+/* Links */
 a {
     color: var(--colorSecondary);
     text-decoration: none;
     &:hover {
         font-weight: bold;
+    }
+}
+
+/* Button */
+button {
+    cursor: pointer;
+}
+
+
+dialog {
+    width: 90%;
+    max-width: var(--maxBodyWidth);
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: 1rem;
+
+        padding: 0;
+
+        button.close {
+            height: 0.5rem;
+            font-size: 1.3rem;
+            border: none;
+            background-color: var(--colorBgMain);
+        }
+    }
+
+    ul {
+        margin-left: 1.5rem;
     }
 }

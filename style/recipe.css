@@ -1,0 +1,8 @@
+/* Recipe */
+
+@import 'styles.css';
+
+/* Image */
+img#picture_meal {
+    max-width: 100%;
+}

@@ -1,16 +1,32 @@
-/* Fjerner address-taggets default italics */
+/* Contact */
+
+/* Screen size wrapper */
+@media (min-width: 640px) {
+    #wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: 1rem;
+        > section {
+            flex: 1 0 auto;
+        }
+    }
+}
+
+/* Removes the italics from default address font */
 address {
     font-style: normal;
-
     #physical_address {
         margin-bottom: 1rem;
     }
 }
 
+/* Contact info */
 #contact_info {
     margin-bottom: 1rem;
 }
 
+/* Form */
 form {
     margin-top: 1rem;
 
@@ -40,5 +56,32 @@ form {
             background-color: var(--colorSecondary);
             border: none;
         }
+    }
+}
+
+/* Contact message */
+#contact_message {
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: 1rem;
+
+        padding: 0;
+
+        button.close {
+            height: 0.5rem;
+            font-size: 1.3rem;
+            border: none;
+            background-color: var(--colorBgMain);
+        }
+    }
+
+    ul {
+        margin-left: 1.5rem;
     }
 }

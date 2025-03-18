@@ -1,0 +1,17 @@
+{
+  "name": "food_repo",
+  "version": "1.0.0",
+  "description": "Front-end application on food recipies that consumes 2 APIs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kamilla",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "eslint": "^9.22.0",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^16.0.0"
+  }
+}
